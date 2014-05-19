@@ -1,4 +1,6 @@
 class TodoList < ActiveRecord::Base
+	has_many :todo_items
+
 	validates :title, presence: true
 	# to check the test made on create_spec.rb
 	validates :title, length: {minimum: 3}
